@@ -8,6 +8,12 @@
 </head>
 <body>
     <div class="wrapper">
+        <nav class="nav">
+            <div class="brand">
+                ☂️
+            </div>
+            <a href="#" class="github-icon"><img src="assets/github.svg" /></a>
+        </nav>
         <div class="analyzer">
             <header class="analyzer-content">
                 <h1>Word Frequency Analyzer 💬</h1>
@@ -66,9 +72,9 @@
     }
 
     a {
-        color: #000;
+        color: #5a82f1;
         text-decoration: none;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid #5a82f1;
     }
 
     a:hover {
@@ -80,6 +86,32 @@
         align-items: center;
         justify-content: center;
         padding-top: 7vh;
+    }
+
+    .nav {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .brand {
+        font-size: 1.2em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .github-icon {
+        width: 25px;
+        border-bottom: 0px;
+    }
+
+    .github-icon:hover {
+        transform: translateY(-3px);
     }
 
     .analyzer {
@@ -109,7 +141,7 @@
         -webkit-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.07); 
         box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.07);
         outline: none;
-        border: 1px solid rgb(173, 173, 173);
+        border: 1px solid #5a82f1;
     }
 
     .analyzer-btn {
@@ -144,7 +176,8 @@
     }
 
     .analyzer-results {
-        border: 1px solid #ccc;
+        border: 1px solid #5a82f1;
+        color: #5a82f1;
         border-radius: 4px;
         font-size: 1.2em;
         line-height: 1.5em;
