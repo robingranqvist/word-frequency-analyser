@@ -19,9 +19,16 @@ submit.addEventListener('click', function(e) {
 */
 function analyzeText(word, text) {
     if (word.length == 0 || text.length == 0) { return "Please fill in all the fields." }
-    let wordsTotal = text.split(" ").length;
-    let wordOccurrence = text.split(word).length - 1;
-    let wordFrequency = parseFloat(((wordOccurrence / wordsTotal)  * 100).toFixed(2));
+    let wordsInText = text.split(" ");
+    let wordsMatchingTotal = 0;
+
+    wordsInText.forEach((w) => {
+        if (w === word) {
+            wordsMatchingTotal++;
+        }
+    });
+
+    let wordFrequency = parseFloat(((wordsMatchingTotal / wordsInText.length) * 100).toFixed(2));
     return resultString(wordFrequency);
 }
 
